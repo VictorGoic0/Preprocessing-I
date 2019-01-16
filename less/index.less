@@ -68,6 +68,7 @@ html, body {
 }
 
 @font-stack: 'Sarabun', sans-serif;
+@custom-grey: #848484;
 
 body {
 	font-family: @font-stack;
@@ -128,13 +129,22 @@ li {
 	padding: 40px 25px 50px 25px;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: space-around;
+	align-content: space-between;
 
-	img {
-		width: 240px;
-		height: 240px;
-		border: 1px solid black;
-		border-radius: 5px;
+	div {
+		height: 72%;
+		border-bottom: solid 1px grey;
+
+		img {
+			width: 240px;
+			height: 240px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+		h1 {
+			padding: 10px 0 20px 0;
+		}
 	}
 
 	button {
@@ -144,15 +154,15 @@ li {
 		background-color: black;
 		height: 40px;
 		width: 152px;
-	  border-radius: 6px;
+		border-radius: 6px;
 		font-size: 1.8rem;
 	}
 
 	@keyframes colorchange {
-	  from {border: 1.2px solid black;}
-	  to {border: 1.2px solid red;}
-	  from {color: white;}
-	  to {color: red;}
+		from {border: 1.2px solid black;}
+		to {border: 1.2px solid red;}
+		from {color: white;}
+		to {color: red;}
 	}
 	button:hover {
 		background-color: black;
@@ -172,8 +182,14 @@ li {
 	}
 }
 
+.section3 {
+	h3 {
+		border-bottom: 1px solid grey;
+	}
+}
+
 footer {
-	background-color: #848484;
+	background-color: @custom-grey;
 	height: 70px;
 	display: flex;
 	align-items: center;
