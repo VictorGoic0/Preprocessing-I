@@ -143,13 +143,15 @@ body {
   font-family: 'Sarabun', sans-serif;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4.6rem;
 }
 h2 {
   font-size: 3rem;
+  font-weight: bold;
 }
 h3 {
   font-size: 2.2rem;
+  font-weight: bold;
 }
 h4 {
   font-size: 2rem;
@@ -185,4 +187,21 @@ li {
 }
 .section1 img {
   max-width: 200px;
+}
+.section2 {
+  display: flex;
+  justify-content: space-between;
+}
+.section2 div {
+  width: 48%;
+}
+footer {
+  background-color: #848484;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: white;
 }
