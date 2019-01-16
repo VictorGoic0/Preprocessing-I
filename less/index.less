@@ -49,10 +49,23 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+.box-sizing(@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
 * {
-    box-sizing: border-box;
+    .box-sizing()
 }
 
 html, body {
     height: 100%;
+}
+
+@font-stack: 'Sarabun', sans-serif;
+
+body {
+	font-family: @font-stack;
 }

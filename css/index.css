@@ -128,9 +128,14 @@ table {
 }
 /* Set every element's box-sizing to border-box */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
+}
+body {
+  font-family: 'Sarabun', sans-serif;
 }
