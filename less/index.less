@@ -67,8 +67,15 @@ html, body {
   /* 1rem === 10px @ medium browser settings */
 }
 
+// Variables
 @font-stack: 'Sarabun', sans-serif;
 @custom-grey: #848484;
+
+// Mixins
+.spacing-between() {
+	display: flex;
+	justify-content: space-between;
+}
 
 body {
 	font-family: @font-stack;
@@ -110,8 +117,7 @@ li {
 
 		nav {
 			width: 40%;
-			display: flex;
-			justify-content: space-between;
+			.spacing-between()
 
 			a {
 				text-decoration: none;
@@ -127,9 +133,7 @@ li {
 	height: 600px;
 	margin: 30px auto;
 	padding: 40px 25px 50px 25px;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: space-between;
+	.spacing-between()
 
 	div {
 		height: 72%;
@@ -174,8 +178,7 @@ li {
 }
 
 .section2 {
-	display: flex;
-	justify-content: space-between;
+	.spacing-between()
 
 	div {
 		width: 48%;
