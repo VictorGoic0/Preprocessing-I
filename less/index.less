@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -49,11 +49,255 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+.box-sizing(@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
 * {
-    box-sizing: border-box;
+    .box-sizing()
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
+  font-size: 62.5%;
+	/* 10px if the browser was 16px*/
+  /* 1rem === 10px @ medium browser settings */
 }
 
+// Variables
+@font-stack: 'Sarabun', sans-serif;
+@custom-grey: #848484;
+@custom-lightgrey: #808080;
+
+// Mixins
+.spacing-between() {
+	display: flex;
+	justify-content: space-between;
+}
+
+body {
+	font-family: @font-stack;
+}
+
+h1 {
+	font-size: 4.6rem;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 1.2;
+
+	@media(max-width: 500px) {
+		text-align: center;
+	}
+}
+
+li {
+	font-size: 1.6rem;
+}
+
+.container {
+	margin: 30px auto;
+	max-width: 700px;
+
+	header {
+		display: flex;
+		justify-content: flex-end;
+
+		nav {
+			width: 40%;
+			.spacing-between();
+
+			@media(max-width: 500px) {
+				width: 100%;
+				display: flex;
+		    flex-wrap: wrap;
+		    align-items: center;
+		    justify-content: space-around;
+				border-top: 2px solid black;
+			}
+
+			a {
+				text-decoration: none;
+				color: black;
+				font-size: 1.6rem;
+
+				@media(max-width: 500px) {
+					width: 100%;
+			    border-bottom: 2px solid black;
+			    align-self: center;
+			    text-align: center;
+					padding: 4%;
+				}
+
+			}
+		}
+	}
+
+	footer {
+		background-color: @custom-grey;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		p {
+			color: white;
+		}
+	}
+}
+
+.section1 {
+	background-color: #efefef;
+	height: 600px;
+	margin: 30px auto;
+	padding: 40px 25px 50px 25px;
+	.spacing-between();
+	flex-wrap: wrap;
+
+	@media(max-width: 500px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 20px 0 0 0;
+	}
+
+	div {
+		height: 72%;
+		border-bottom: solid 1px grey;
+		width: 100%;
+
+		@media(max-width: 500px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		img {
+			width: 240px;
+			height: 240px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+		h1 {
+			padding: 10px 0 20px 0;
+
+			@media(max-width: 500px) {
+				text-align: center;
+			}
+		}
+	}
+
+	button {
+		border: 1.2px solid black;
+		color: white;
+		background-color: black;
+		height: 40px;
+		width: 152px;
+		border-radius: 6px;
+		font-size: 1.8rem;
+	}
+
+	@keyframes colorchange {
+		from {border: 1.2px solid black;}
+		to {border: 1.2px solid red;}
+		from {color: white;}
+		to {color: red;}
+	}
+	button:hover {
+		background-color: black;
+		color: white;
+		animation-name: colorchange;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+}
+
+.section2 {
+	margin: 20px auto;
+	.spacing-between();
+
+	h2 {
+		padding-bottom: 14px;
+	}
+
+	@media(max-width: 500px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	div {
+		height: 220px;
+		width: 48%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-between;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			justify-content: center;
+			align-content: flex-start;
+		}
+
+		ul {
+			height: 80%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+
+			li {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.section3 {
+	margin: 30px auto;
+
+	h3 {
+		border-bottom: 1px solid grey;
+		padding-bottom: 10px;
+
+		@media(max-width: 500px) {
+			text-align: center;
+		}
+	}
+
+	.subsection3 {
+		.spacing-between();
+
+		div {
+			height: 160px;
+			width: 133px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			.bold {
+				font-weight: bold;
+			}
+
+			p {
+				width: 100%;
+			}
+		}
+	}
+}
