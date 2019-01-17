@@ -249,13 +249,27 @@ li {
   justify-content: space-between;
 }
 .section2 div {
+  height: 220px;
   width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.section2 div ul {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.section2 div ul li {
+  width: 100%;
 }
 .section3 {
   margin: 30px auto;
 }
 .section3 h3 {
   border-bottom: 1px solid grey;
+  padding-bottom: 10px;
 }
 .section3 .subsection3 {
   display: flex;
