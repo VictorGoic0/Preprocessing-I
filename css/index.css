@@ -160,6 +160,11 @@ p {
   font-size: 1.6rem;
   line-height: 1.2;
 }
+@media (max-width: 500px) {
+  p {
+    text-align: center;
+  }
+}
 li {
   font-size: 1.6rem;
 }
@@ -326,6 +331,11 @@ li {
 .section3 h3 {
   border-bottom: 1px solid grey;
   padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .section3 h3 {
+    text-align: center;
+  }
 }
 .section3 .subsection3 {
   display: flex;
