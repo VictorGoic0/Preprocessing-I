@@ -219,10 +219,25 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 500px) {
+  .section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0 0 0;
+  }
+}
 .section1 div {
   height: 72%;
   border-bottom: solid 1px grey;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .section1 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .section1 div img {
   width: 240px;
@@ -232,6 +247,11 @@ li {
 }
 .section1 div h1 {
   padding: 10px 0 20px 0;
+}
+@media (max-width: 500px) {
+  .section1 div h1 {
+    text-align: center;
+  }
 }
 .section1 button {
   border: 1.2px solid black;
@@ -268,12 +288,24 @@ li {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .section2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .section2 div {
   height: 220px;
   width: 48%;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+}
+@media (max-width: 500px) {
+  .section2 div {
+    width: 100%;
+    justify-content: center;
+  }
 }
 .section2 div ul {
   height: 80%;
