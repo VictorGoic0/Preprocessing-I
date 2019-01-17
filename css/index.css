@@ -244,11 +244,15 @@ li {
   animation-fill-mode: forwards;
 }
 .section2 {
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
 }
 .section2 div {
   width: 48%;
+}
+.section3 {
+  margin: 30px auto;
 }
 .section3 h3 {
   border-bottom: 1px solid grey;
