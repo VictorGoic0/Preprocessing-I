@@ -288,6 +288,9 @@ li {
   display: flex;
   justify-content: space-between;
 }
+.section2 h2 {
+  padding-bottom: 14px;
+}
 @media (max-width: 500px) {
   .section2 {
     display: flex;
@@ -305,6 +308,7 @@ li {
   .section2 div {
     width: 100%;
     justify-content: center;
+    align-content: flex-start;
   }
 }
 .section2 div ul {
