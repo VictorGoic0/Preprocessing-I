@@ -117,13 +117,25 @@ li {
 
 		nav {
 			width: 40%;
-			.spacing-between()
+			.spacing-between();
 
 			a {
 				text-decoration: none;
 				color: black;
 				font-size: 1.6rem;
+
 			}
+		}
+	}
+
+	footer {
+		background-color: @custom-grey;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		p {
+			color: white;
 		}
 	}
 }
@@ -133,7 +145,8 @@ li {
 	height: 600px;
 	margin: 30px auto;
 	padding: 40px 25px 50px 25px;
-	.spacing-between()
+	.spacing-between();
+	flex-wrap: wrap;
 
 	div {
 		height: 72%;
@@ -178,7 +191,7 @@ li {
 }
 
 .section2 {
-	.spacing-between()
+	.spacing-between();
 
 	div {
 		width: 48%;
@@ -189,15 +202,8 @@ li {
 	h3 {
 		border-bottom: 1px solid grey;
 	}
-}
-
-footer {
-	background-color: @custom-grey;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	p {
-		color: white;
+	div {
+		height: 20px;
+		.spacing-between;
 	}
 }

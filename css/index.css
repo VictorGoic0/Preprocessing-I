@@ -180,14 +180,24 @@ li {
   color: black;
   font-size: 1.6rem;
 }
+.container footer {
+  background-color: #848484;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container footer p {
+  color: white;
+}
 .section1 {
   background-color: #efefef;
   height: 600px;
   margin: 30px auto;
   padding: 40px 25px 50px 25px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  align-content: space-between;
 }
 .section1 div {
   height: 72%;
@@ -243,13 +253,8 @@ li {
 .section3 h3 {
   border-bottom: 1px solid grey;
 }
-footer {
-  background-color: #848484;
-  height: 70px;
+.section3 div {
+  height: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-footer p {
-  color: white;
+  justify-content: space-between;
 }
