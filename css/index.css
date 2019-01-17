@@ -257,8 +257,20 @@ li {
 .section3 h3 {
   border-bottom: 1px solid grey;
 }
-.section3 div {
-  height: 20px;
+.section3 .subsection3 {
   display: flex;
   justify-content: space-between;
+}
+.section3 .subsection3 div {
+  height: 160px;
+  width: 133px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section3 .subsection3 div .bold {
+  font-weight: bold;
+}
+.section3 .subsection3 div p {
+  width: 100%;
 }

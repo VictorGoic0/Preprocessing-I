@@ -70,6 +70,7 @@ html, body {
 // Variables
 @font-stack: 'Sarabun', sans-serif;
 @custom-grey: #848484;
+@custom-lightgrey: #808080;
 
 // Mixins
 .spacing-between() {
@@ -205,8 +206,24 @@ li {
 	h3 {
 		border-bottom: 1px solid grey;
 	}
-	div {
-		height: 20px;
-		.spacing-between;
+
+	.subsection3 {
+		.spacing-between();
+
+		div {
+			height: 160px;
+			width: 133px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			.bold {
+				font-weight: bold;
+			}
+
+			p {
+				width: 100%;
+			}
+		}
 	}
 }
